@@ -54,3 +54,10 @@ MouseMovement: Adjust camera line of sight
 
 MouseWheel: Adjust camera angle
 
+
+
+### Exmaple
+
+![image-20201009192534322](C:\Users\11518\AppData\Roaming\Typora\typora-user-images\image-20201009192534322.png)
+
+![image-20201009192627706](C:\Users\11518\AppData\Roaming\Typora\typora-user-images\image-20201009192627706.png)
