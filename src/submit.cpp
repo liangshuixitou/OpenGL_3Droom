@@ -1107,8 +1107,6 @@ int main()
             // ----------------------------------------
             if (i > 0 && i < 6)
             {
-                if (i != 5)
-                    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
                 model = glm::scale(model, glm::vec3(0.2f)); // Make it a smaller cube
                 model = glm::rotate(model, (float)glfwGetTime(), glm::vec3(0.0f, 1.0f, 0.0f));
             }
@@ -1160,7 +1158,6 @@ int main()
 
             lightProgram->setMat4("model", model);
             glDrawArrays(GL_TRIANGLES, 0, 36);
-            glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
         }
 
         // 启动平面加载程序
