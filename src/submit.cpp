@@ -163,6 +163,7 @@ private:
 };
 
 // 初始屏幕大小
+// ------------
 const unsigned int SCR_WIDTH = 1000;
 const unsigned int SCR_HEIGHT = 800;
 
@@ -420,13 +421,13 @@ int main()
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
     // 苹果操作系统所特有的操作，可忽略
-    // ------------------------------
+// ------------------------------------------------------------------------
 #ifdef __APPLE__
     glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 #endif
 
     // glfw: 创建窗口
-    // --------------------
+    // ------------------------------------------------------------------------
     GLFWwindow *window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "3D Room", NULL, NULL);
     if (window == NULL)
     {
@@ -441,9 +442,9 @@ int main()
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
     glfwSetKeyCallback(window, key_callback);
     glfwSetMouseButtonCallback(window, mouse_button_callback);
-    glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
     glfwSetCursorPosCallback(window, mouse_callback);
     glfwSetScrollCallback(window, scroll_callback);
+    glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 
     // glad: 加载底层OpenGL函数指针
     // ---------------------------------------
@@ -1514,9 +1515,9 @@ void key_callback(GLFWwindow *window, int key, int scancode, int action, int mod
     {
         doorFont = !doorFont;
         if (doorFont)
-            std::cout << "仓库门开启" << std::endl;
+            std::cout << "仓库门关闭" << std::endl;
         else
-            std::cout << "仓库们关闭" << std::endl;
+            std::cout << "仓库们开启" << std::endl;
     }
 
     // 切换枕头翻滚
@@ -1615,33 +1616,33 @@ void processInput(GLFWwindow *window)
     // ----------------------------------------------
     if (glfwGetKey(window, GLFW_KEY_1) == GLFW_PRESS)
     {
-        if (fanSpeed != 1.0f)
+        if (fanSpeed != 2.0f)
             std::cout << "呼~" << std::endl;
-        fanSpeed = 1.0f;
+        fanSpeed = 2.0f;
     }
     if (glfwGetKey(window, GLFW_KEY_2) == GLFW_PRESS)
     {
-        if (fanSpeed != 2.0f)
+        if (fanSpeed != 4.0f)
             std::cout << "呼呼~~" << std::endl;
-        fanSpeed = 2.0f;
+        fanSpeed = 4.0f;
     }
     if (glfwGetKey(window, GLFW_KEY_3) == GLFW_PRESS)
     {
-        if (fanSpeed != 3.0f)
+        if (fanSpeed != 6.0f)
             std::cout << "呼呼呼~~~" << std::endl;
-        fanSpeed = 3.0f;
+        fanSpeed = 6.0f;
     }
     if (glfwGetKey(window, GLFW_KEY_4) == GLFW_PRESS)
     {
-        if (fanSpeed != 4.0f)
+        if (fanSpeed != 8.0f)
             std::cout << "呼呼呼呼~~~~" << std::endl;
-        fanSpeed = 4.0f;
+        fanSpeed = 8.0f;
     }
     if (glfwGetKey(window, GLFW_KEY_5) == GLFW_PRESS)
     {
-        if (fanSpeed != 5.0f)
+        if (fanSpeed != 10.0f)
             std::cout << "呼呼呼呼呼~~~~~" << std::endl;
-        fanSpeed = 5.0f;
+        fanSpeed = 10.0f;
     }
     if (glfwGetKey(window, GLFW_KEY_0) == GLFW_PRESS)
     {
