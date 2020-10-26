@@ -6,6 +6,8 @@ Student Name:¿Óª‘—Ù
 NOTE
 The mingw environment must be configured before running the program
 
+Or I suggest you make run the "makefile" first to regenerate the "main.exe"
+
 INSTRUMENT
 Key "0": Turn off the fan
 Key "1": Adjust the fan speed by 1
